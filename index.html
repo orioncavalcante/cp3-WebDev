@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repositório de Mídia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TELA DE LOGIN -->
+  <div id="login-screen">
+    <div class="login-box">
+      <h1>Repositório de Mídia</h1>
+      <p class="login-subtitle">Acesso restrito</p>
+      <div id="login-error" class="error-msg hidden"></div>
+      <input type="text" id="username" placeholder="Usuário" />
+      <input type="password" id="password" placeholder="Senha" />
+      <button onclick="fazerLogin()">Entrar</button>
+    </div>
+  </div>
+
+  <!-- TELA PRINCIPAL -->
+  <div id="main-screen" class="hidden">
+    <header>
+      <h1>Repositório de Mídia</h1>
+      <button id="btn-logout" onclick="fazerLogout()">Sair</button>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <div id="crud-error" class="error-msg hidden"></div>
+        <input type="text" id="novo-item" placeholder="Nome da mídia..." />
+        <div class="btn-group">
+          <button onclick="adicionarFim()">+ Adicionar ao final</button>
+          <button onclick="adicionarInicio()">+ Adicionar ao início</button>
+        </div>
+      </section>
+
+      <section class="list-section">
+        <ul id="lista-midias"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

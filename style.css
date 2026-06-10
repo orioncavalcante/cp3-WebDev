@@ -1,0 +1,229 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f0ede8;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+.hidden { display: none !important; }
+
+.error-msg {
+  background: #fee2e2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  padding: 8px 12px;
+  border-radius: 7px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+/* LOGIN */
+#login-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.login-box {
+  background: #fff;
+  border: 1px solid #e2ddd7;
+  border-radius: 14px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-box h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  margin-bottom: 0;
+}
+
+.login-subtitle {
+  font-size: 0.82rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+/* HEADER */
+header {
+  background: #fff;
+  border-bottom: 1px solid #e2ddd7;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+/* MAIN */
+main {
+  max-width: 620px;
+  margin: 36px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* FORM SECTION */
+.form-section {
+  background: #fff;
+  border: 1px solid #e2ddd7;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* LISTA */
+.list-section {
+  background: #fff;
+  border: 1px solid #e2ddd7;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.list-header {
+  padding: 12px 18px;
+  border-bottom: 1px solid #f0ede8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-header span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #aaa;
+}
+
+#lista-midias { list-style: none; }
+
+#lista-midias li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 18px;
+  border-bottom: 1px solid #f5f3f0;
+  font-size: 0.925rem;
+  transition: background 0.1s;
+}
+
+#lista-midias li:last-child { border-bottom: none; }
+#lista-midias li:hover { background: #faf9f7; }
+
+.item-index {
+  color: #c8c4bd;
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  min-width: 20px;
+  text-align: right;
+}
+
+.item-nome { flex: 1; color: #1a1a1a; }
+
+.item-edit-input {
+  flex: 1;
+  padding: 5px 9px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.925rem;
+  outline: none;
+}
+
+.item-edit-input:focus { border-color: #555; }
+
+/* INPUTS */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-size: 0.925rem;
+  outline: none;
+  background: #faf9f8;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #888;
+  background: #fff;
+}
+
+/* BOTÕES */
+button {
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  background: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #333;
+  transition: background 0.12s, border-color 0.12s;
+  white-space: nowrap;
+}
+
+button:hover { background: #f5f3f0; border-color: #ccc; }
+button:active { transform: scale(0.98); }
+
+button.btn-primary {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}
+
+button.btn-primary:hover { background: #333; border-color: #333; }
+
+button.btn-danger {
+  color: #b91c1c;
+  border-color: #f5c4c4;
+  background: #fff;
+}
+
+button.btn-danger:hover { background: #fee2e2; border-color: #fca5a5; }
+
+#btn-logout {
+  font-size: 0.78rem;
+  color: #888;
+  border-color: #e5e5e5;
+  padding: 6px 12px;
+}
+
+#btn-logout:hover { color: #333; background: #f5f3f0; }
+
+.acoes-normal, .acoes-edicao {
+  display: flex;
+  gap: 6px;
+}
+
+.acoes-normal button, .acoes-edicao button {
+  padding: 5px 11px;
+  font-size: 0.8rem;
+}
