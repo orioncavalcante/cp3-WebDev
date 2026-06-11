@@ -1,5 +1,5 @@
 // ── Estado global ────────────────────────────────────────────────────────────
-let midias = ["Radiohead", "Måneskin", "Pearl Jam", "Nazareth", "Evangelion", "The Boys", "Invencível", "Bastardos Inglórios", "Pokémon"];
+let midias = ["Radiohead", "Pearl Jam","Evangelion"];
 
 // ── Login ────────────────────────────────────────────────────────────────────
 function fazerLogin() {
@@ -147,3 +147,16 @@ function escapar(str) {
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 // A lista só é renderizada após login bem-sucedido.
+
+document.getElementById("contador-midias").textContent = midias.length;
+
+// Função utilitária para acionar o login ao apertar Enter
+function checarEnter(event) {
+    if (event.key === "Enter") {
+    fazerLogin();
+    }
+}
+
+// Adiciona o "ouvinte" aos campos de texto do login
+document.getElementById("username").addEventListener("keydown", checarEnter);
+document.getElementById("password").addEventListener("keydown", checarEnter);
